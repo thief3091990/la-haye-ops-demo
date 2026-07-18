@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Bản demo hệ thống quản trị vận hành La Haye">
+  <title>La Haye Operations Hub — Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="logo">LH</span><div><b>LA HAYE</b><small>Operations Hub</small></div></div>
+      <nav id="nav">
+        <button class="active" data-view="overview"><span>⌂</span>Tổng quan</button>
+        <button data-view="organization"><span>◎</span>Cơ cấu 5 bộ phận</button>
+        <button data-view="process"><span>↻</span>Quy trình & công việc</button>
+        <button data-view="crm"><span>◇</span>Marketing & Sales</button>
+        <button data-view="kpi"><span>▥</span>KPI & báo cáo</button>
+        <button data-view="data"><span>◫</span>Dữ liệu & tích hợp</button>
+      </nav>
+      <div class="system"><i></i><div>Hệ thống hoạt động bình thường<small>Dữ liệu minh họa · Public demo</small></div></div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <button class="menu" id="menu" aria-label="Mở menu">☰</button>
+        <div><p>HỆ THỐNG QUẢN TRỊ LA HAYE <em>DEMO</em></p><h1 id="pageTitle">Tổng quan điều hành</h1></div>
+        <div class="top-actions"><select id="scope"><option>Toàn công ty</option><option>Chi nhánh 1</option><option>Chi nhánh 2</option><option>Chi nhánh 3</option><option>Catering</option></select><span class="avatar">LA</span></div>
+      </header>
+      <section class="filters"><label>Thời gian <select><option>Tháng này</option><option>Tuần này</option><option>Quý này</option></select></label><span><i></i>Cập nhật gần thời gian thực</span></section>
+      <div id="content" class="content"></div>
+    </main>
+  </div>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true"><button id="closeDrawer">×</button><div id="drawerContent"></div></aside>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
